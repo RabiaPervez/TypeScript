@@ -1,0 +1,23 @@
+{
+  "name": "bina-calc",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "bin": "./bina-calc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/chalk-animation": "^1.6.1",
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.11.11"
+  },
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
+}
