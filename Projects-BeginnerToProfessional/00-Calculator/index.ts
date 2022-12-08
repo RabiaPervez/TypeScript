@@ -1,4 +1,4 @@
-#!usr/bin/env node
+#! /usr/bin/env node
 
 import inquirer from "inquirer";
 import chalk from "chalk";
@@ -32,7 +32,7 @@ async function welcome(){
 
 await welcome();
 async function askQuestion(){
-    await inquirer
+const ans =  await inquirer
   .prompt([
     /* Pass your questions in here */
     {
@@ -44,31 +44,30 @@ async function askQuestion(){
     {
         type:"number",
         name:"num1",
-        message:"Enter number 1:"
+        message:"Enter number 1:",
     },
     {
         type:"number",
         name:"num2",
         message:"Enter number 2:"
     },
-  ])
-  .then((answers) => {
+  ]);
+  //.then((answers) => {
     // Use user feedback for... whatever!!
     //console.log(answers);
-    if(answers.operator == "addition"){
-        console.log(chalk.green(`The sum of ${answers.num1} and ${answers.num2} is ${answers.num1 + answers.num2}`));
+    if(ans.operator == "addition"){
+        console.log(chalk.green(`The sum of ${ans.num1} and ${ans.num2} is ${ans.num1 + ans.num2}`));
     }
-    else if(answers.operator == "subtraction"){
-        console.log(`The difference of ${answers.num1} and ${answers.num2} is ${answers.num1 - answers.num2}`);
+    else if(ans.operator == "subtraction"){
+        console.log(chalk.green(`The difference of ${ans.num1} and ${ans.num2} is ${ans.num1 - ans.num2}`));
     }
-    else if(answers.operator == "multiplication"){
-        console.log(`The product of ${answers.num1} and ${answers.num2} is ${answers.num1 * answers.num2}`);
+    else if(ans.operator == "multiplication"){
+        console.log(chalk.green(`The product of ${ans.num1} and ${ans.num2} is ${ans.num1 * ans.num2}`));
     }
-    else if(answers.operator == "division"){
-        console.log(`The quotient of ${answers.num1} and ${answers.num2} is ${answers.num1 / answers.num2}`);
+    else if(ans.operator == "division"){
+        console.log(chalk.green(`The quotient of ${ans.num1} and ${ans.num2} is ${ans.num1 / ans.num2}`));
     }
-    })
-  };
+    };
 //askQuestion(); 
 async function startAgain(){
     do{
